@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: genai-task-api
+  datasource:
+    url: jdbc:h2:mem:taskdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: false
+
+server:
+  port: 8081
+  error:
+    include-stacktrace: never
+    include-message: never
+    include-binding-errors: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: when_authorized
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:task-api-dev-secret-key-at-least-32-bytes-long}
+    issuer: genai-task-api
+    expiration: 1h
+
+logging:
+  level:
+    com.alex.taskapi: INFO
