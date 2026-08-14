@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: pokedex-test
+  datasource:
+    url: jdbc:h2:mem:pokedex;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_batch_fetch_size: 20
+  flyway:
+    enabled: true
+
+pokeapi:
+  base-url: http://localhost:0/api/v2
+  connect-timeout: 500ms
+  read-timeout: 500ms
+
+security:
+  jwt:
+    secret: pokedex-test-secret-key-at-least-32-bytes-long
+    issuer: pokedex-test
+    expiration: 1h
+
+resilience4j:
+  retry:
+    instances:
+      pokeApi:
+        wait-duration: 10ms
+  circuitbreaker:
+    instances:
+      pokeApi:
+        # Long enough that an opened circuit stays open for the assertion that
+        # follows it; no test waits for the half-open transition.
+        wait-duration-in-open-state: 30s
