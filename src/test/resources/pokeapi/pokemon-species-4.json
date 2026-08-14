@@ -1,0 +1,33 @@
+{
+    "genera":  [
+                   {
+                       "genus":  "Lizard Pokémon",
+                       "language":  {
+                                        "name":  "en"
+                                    }
+                   }
+               ],
+    "flavor_text_entries":  [
+                                {
+                                    "flavor_text":  "Obviously prefers\nhot places. When\nit rains, steam\fis said to spout\nfrom the tip of\nits tail.",
+                                    "language":  {
+                                                     "name":  "en"
+                                                 },
+                                    "version":  {
+                                                    "name":  "red"
+                                                }
+                                },
+                                {
+                                    "flavor_text":  "Obviously prefers\nhot places. When\nit rains, steam\fis said to spout\nfrom the tip of\nits tail.",
+                                    "language":  {
+                                                     "name":  "en"
+                                                 },
+                                    "version":  {
+                                                    "name":  "blue"
+                                                }
+                                }
+                            ],
+    "evolution_chain":  {
+                            "url":  "https://pokeapi.co/api/v2/evolution-chain/2/"
+                        }
+}

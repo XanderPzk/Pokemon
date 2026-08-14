@@ -1,0 +1,33 @@
+{
+    "genera":  [
+                   {
+                       "genus":  "Seed Pokémon",
+                       "language":  {
+                                        "name":  "en"
+                                    }
+                   }
+               ],
+    "flavor_text_entries":  [
+                                {
+                                    "flavor_text":  "When the bulb on\nits back grows\nlarge, it appears\fto lose the\nability to stand\non its hind legs.",
+                                    "language":  {
+                                                     "name":  "en"
+                                                 },
+                                    "version":  {
+                                                    "name":  "red"
+                                                }
+                                },
+                                {
+                                    "flavor_text":  "When the bulb on\nits back grows\nlarge, it appears\fto lose the\nability to stand\non its hind legs.",
+                                    "language":  {
+                                                     "name":  "en"
+                                                 },
+                                    "version":  {
+                                                    "name":  "blue"
+                                                }
+                                }
+                            ],
+    "evolution_chain":  {
+                            "url":  "https://pokeapi.co/api/v2/evolution-chain/1/"
+                        }
+}

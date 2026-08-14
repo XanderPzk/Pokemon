@@ -1,0 +1,33 @@
+{
+    "genera":  [
+                   {
+                       "genus":  "Seed Pokémon",
+                       "language":  {
+                                        "name":  "en"
+                                    }
+                   }
+               ],
+    "flavor_text_entries":  [
+                                {
+                                    "flavor_text":  "A strange seed was\nplanted on its\nback at birth.\fThe plant sprouts\nand grows with\nthis POKéMON.",
+                                    "language":  {
+                                                     "name":  "en"
+                                                 },
+                                    "version":  {
+                                                    "name":  "red"
+                                                }
+                                },
+                                {
+                                    "flavor_text":  "A strange seed was\nplanted on its\nback at birth.\fThe plant sprouts\nand grows with\nthis POKéMON.",
+                                    "language":  {
+                                                     "name":  "en"
+                                                 },
+                                    "version":  {
+                                                    "name":  "blue"
+                                                }
+                                }
+                            ],
+    "evolution_chain":  {
+                            "url":  "https://pokeapi.co/api/v2/evolution-chain/1/"
+                        }
+}
