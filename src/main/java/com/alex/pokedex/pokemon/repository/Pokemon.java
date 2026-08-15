@@ -151,7 +151,7 @@ public class Pokemon {
 
     private static List<String> validateTags(List<String> tags) {
         if (tags == null) {
-            return List.of();
+            return new ArrayList<>();
         }
         if (tags.size() > MAX_INTERNAL_TAGS) {
             throw ApiException.badRequest(
@@ -165,7 +165,7 @@ public class Pokemon {
             }
             validated.add(tag);
         }
-        return List.copyOf(validated);
+        return validated;
     }
 
     public Long getId() {
