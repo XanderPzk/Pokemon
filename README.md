@@ -158,14 +158,21 @@ Error responses use a consistent envelope:
 
 ## Architecture
 
-Conventional layered Spring Boot, organized by feature:
+Layered Spring Boot, organized by feature with explicit web/service/repository sub-packages:
 
 ```
 com.alex.pokedex/
 ├── common/       # ApiException, GlobalExceptionHandler, RequestLoggingFilter
 ├── config/       # Security, OpenAPI, PokeApi RestClient
-├── auth/         # User entity, AuthService, JWT
-├── pokemon/      # Pokemon entity, PokemonService, PokeApi client
+├── auth/
+│   ├── web/          # AuthController
+│   ├── service/      # AuthService, JwtTokenProvider
+│   └── repository/   # User, UserRepository
+├── pokemon/
+│   ├── web/          # PokemonController
+│   ├── service/      # PokemonService, PokeApiMapper
+│   ├── repository/   # Pokemon, PokemonRepository
+│   └── pokeapi/      # PokeApiHttpClient, PokeApiDtos, PokeApiServerException
 └── HealthController, PokedexApplication
 ```
 

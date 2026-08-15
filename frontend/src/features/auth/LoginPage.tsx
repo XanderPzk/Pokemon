@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ErrorMessage } from '../../components/ui';
-import { parseApiError } from '../../api/client';
+import { parseApiError } from '../../api/errors';
 import { login, useAuth } from './AuthContext';
 
 export function LoginPage() {

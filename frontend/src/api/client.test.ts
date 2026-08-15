@@ -2,7 +2,7 @@ import { describe, expect, it, beforeEach } from 'vitest';
 import { http, HttpResponse } from 'msw';
 import { server } from '../setupTests';
 import { apiClient } from './client';
-import { clearToken, getToken, setToken } from '../features/auth/AuthContext';
+import { clearToken, getToken, setToken } from '../lib/storage';
 
 describe('apiClient', () => {
   beforeEach(() => {
