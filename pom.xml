@@ -204,7 +204,6 @@
                         <configuration>
                             <excludes>
                                 <exclude>**/PokedexApplication.class</exclude>
-                                <exclude>**/dto/**</exclude>
                                 <exclude>**/*Properties.class</exclude>
                                 <exclude>**/config/**</exclude>
                             </excludes>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ErrorMessage, Pagination, Spinner } from '../../components/ui';
-import { parseApiError } from '../../api/client';
+import { parseApiError } from '../../api/errors';
 import { PokemonCard } from './PokemonCard';
 import { usePokemonList } from './hooks';
 

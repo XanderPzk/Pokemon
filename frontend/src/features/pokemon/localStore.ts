@@ -1,5 +1,5 @@
 import type { SyncedPokemon } from '../../api/types';
-import { localPokemonStorageKey } from '../auth/AuthContext';
+import { localPokemonStorageKey } from '../../lib/storage';
 
 function readRegistry(userEmail: string): SyncedPokemon[] {
   const raw = localStorage.getItem(localPokemonStorageKey(userEmail));

@@ -59,7 +59,7 @@ resilience4j:
         wait-duration-in-open-state: 10s
         permitted-number-of-calls-in-half-open-state: 2
         record-exceptions:
-          - com.alex.pokedex.pokemon.PokeApiServerException
+          - com.alex.pokedex.pokemon.pokeapi.PokeApiServerException
           - org.springframework.web.client.ResourceAccessException
         ignore-exceptions:
           - com.alex.pokedex.common.ApiException
@@ -71,6 +71,6 @@ resilience4j:
         wait-duration: 300ms
         retry-exceptions:
           - org.springframework.web.client.ResourceAccessException
-          - com.alex.pokedex.pokemon.PokeApiServerException
+          - com.alex.pokedex.pokemon.pokeapi.PokeApiServerException
         ignore-exceptions:
           - com.alex.pokedex.common.ApiException

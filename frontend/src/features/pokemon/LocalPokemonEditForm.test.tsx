@@ -2,7 +2,8 @@ import { describe, expect, it, vi } from 'vitest';
 import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderWithProviders } from '../../test/testUtils';
-import { LocalPokemonEditForm, buildDirtyPatch, validatePatch } from './LocalPokemonEditForm';
+import { LocalPokemonEditForm } from './LocalPokemonEditForm';
+import { buildDirtyPatch, validatePatch } from './localPokemonPatch';
 import { sampleSynced } from '../../test/fixtures';
 
 describe('LocalPokemonEditForm helpers', () => {

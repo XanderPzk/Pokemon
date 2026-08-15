@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseApiError, isNotFoundError } from './client';
+import { parseApiError, isNotFoundError } from './errors';
 import type { AxiosError } from 'axios';
 import type { ErrorResponse } from './types';
 

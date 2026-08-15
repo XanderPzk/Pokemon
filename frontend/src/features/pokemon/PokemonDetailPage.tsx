@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ErrorMessage, Spinner } from '../../components/ui';
-import { isNotFoundError, parseApiError } from '../../api/client';
+import { isNotFoundError, parseApiError } from '../../api/errors';
 import { useAuth } from '../auth/AuthContext';
 import { EvolutionChain } from './EvolutionChain';
-import { formatMassKg, usePokemonDetail, useSyncPokemon } from './hooks';
+import { formatMassKg } from './format';
+import { usePokemonDetail, useSyncPokemon } from './hooks';
 import { StatBar } from './StatBar';
 
 export function PokemonDetailPage() {

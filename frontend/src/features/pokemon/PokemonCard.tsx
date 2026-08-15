@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { PokemonSummary } from '../../api/types';
-import { formatMassKg } from './hooks';
+import { formatMassKg } from './format';
 
 interface PokemonCardProps {
   pokemon: PokemonSummary;

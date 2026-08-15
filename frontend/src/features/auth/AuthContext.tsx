@@ -7,51 +7,15 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import type { AuthTokenResponse, LoginRequest, RegisterRequest, User } from '../../api/types';
-import { apiClient } from '../../api/client';
-
-const TOKEN_KEY = 'pokedex.auth.token';
-const USER_KEY = 'pokedex.auth.user';
-
-export function getToken(): string | null {
-  return localStorage.getItem(TOKEN_KEY);
-}
-
-export function setToken(token: string): void {
-  localStorage.setItem(TOKEN_KEY, token);
-}
-
-export function clearToken(): void {
-  localStorage.removeItem(TOKEN_KEY);
-  localStorage.removeItem(USER_KEY);
-}
-
-export function getStoredUserEmail(): string | null {
-  return localStorage.getItem(USER_KEY);
-}
-
-export function setStoredUserEmail(email: string): void {
-  localStorage.setItem(USER_KEY, email);
-}
-
-export function localPokemonStorageKey(userEmail: string): string {
-  return `pokedex.localPokemon.${userEmail}`;
-}
-
-export async function login(request: LoginRequest) {
-  const { data } = await apiClient.post<AuthTokenResponse>('/auth/login', request);
-  return data;
-}
-
-export async function register(request: RegisterRequest) {
-  const { data } = await apiClient.post<User>('/auth/register', request);
-  return data;
-}
-
-export async function fetchCurrentUser() {
-  const { data } = await apiClient.get<User>('/auth/me');
-  return data;
-}
+import type { User } from '../../api/types';
+import {
+  clearToken,
+  getStoredUserEmail,
+  getToken,
+  setStoredUserEmail,
+  setToken,
+} from '../../lib/storage';
+import { fetchCurrentUser } from './authApi';
 
 interface AuthContextValue {
   user: User | null;
@@ -127,3 +91,14 @@ export function useAuth(): AuthContextValue {
 export function useAuthEmail(): string | null {
   return getStoredUserEmail();
 }
+
+export {
+  clearToken,
+  getStoredUserEmail,
+  getToken,
+  localPokemonStorageKey,
+  setStoredUserEmail,
+  setToken,
+} from '../../lib/storage';
+
+export { login, register } from './authApi';

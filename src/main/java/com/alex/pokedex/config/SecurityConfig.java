@@ -1,6 +1,6 @@
 package com.alex.pokedex.config;
 
-import com.alex.pokedex.auth.JwtTokenProvider;
+import com.alex.pokedex.auth.service.JwtTokenProvider;
 import com.alex.pokedex.common.GlobalExceptionHandler;
 import com.alex.pokedex.common.RequestLoggingFilter;
 import com.fasterxml.jackson.databind.ObjectMapper;
